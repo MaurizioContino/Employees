@@ -1,0 +1,20 @@
+﻿@model EmployeesDataService.models.DBUpdateResult
+@{
+
+    ViewData["Title"] = "UpdateDB";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (Model.Success)
+{
+    <h1>Database updated</h1>
+    <button type="button" class="btn btn-success" onclick='location.href="/"'>Go to the app</button>
+}
+else
+{
+    <h1> Update fails with error:</h1>
+    <h2 class="text-danger">@Html.Raw(Model.Error)</h2>
+}
+
+
